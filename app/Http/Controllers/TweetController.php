@@ -15,11 +15,14 @@ class TweetController extends Controller
         ]);
     }
 
-    public function show($slug) // untuk menampilkan detail dari satu postnya
+    // single tweet
+    public function show(Tweet $tweet) // untuk menampilkan detail dari satu postnya
+    // route mengirim model ke controller (Tweet), lalu diikat menjadi satu (Tweet $tweet)
+    // lalu variebel yang dikirim harus sama dengan variabel yang dikirimkan di route '/tweet/{tweet}'
     {
         return view('tweet', [
             "title" => "Single Tweet",
-            "tweet" => Tweet::find($slug)
+            "tweet" => $tweet // berhubungan denga Route model binding di atas (Tweet $tweet)
         ]);
     }
 }

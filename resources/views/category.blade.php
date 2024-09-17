@@ -3,7 +3,7 @@
 @extends('layouts.main')
 
 @section('container')
-    <h1 class="mb-5">Halaman Blog</h1>
+    <h1 class="mb-5">Tweet Category : {{ $category }}</h1>
     @foreach ($tweets as $tweet)
         <!-- $tweets berasal dari 'routes/web.php' di dalam route 'blog' -->
         <article class="mb-5">
