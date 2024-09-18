@@ -22,6 +22,8 @@ class User extends Authenticatable
         'password',
     ];
 
+    // scroll ke bawah lagi coy
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -43,5 +45,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function tweet()
+    {
+        return $this->hasMany(Tweet::class);
     }
 }

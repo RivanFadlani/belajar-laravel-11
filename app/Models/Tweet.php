@@ -23,4 +23,9 @@ class Tweet extends Model
     {
         return $this->belongsTo(Category::class); // satu tweet category punya satu category
     }
+
+    public function user()
+    {
+        return $this->belongsTo((User::class));
+    }
 }
